@@ -1,0 +1,102 @@
+.post-item {
+  background-color: #fefefe;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.post-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.post-item .content {
+  font-size: 1.15rem;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: left;
+  word-break: break-word;
+}
+
+.post-item textarea {
+  width: 100%;
+  min-height: 60px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  margin-bottom: 15px;
+  font-family: inherit;
+}
+
+.post-item .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.post-item .footer button {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+/* Delete */
+.post-item .footer button:nth-child(2) {
+  background-color: #ff5252;
+  color: #fff;
+}
+.post-item .footer button:nth-child(2):hover {
+  background-color: #e53935;
+  transform: scale(1.05);
+}
+
+/* Edit */
+.post-item .footer button:first-child {
+  background-color: #2196f3;
+  color: white;
+}
+.post-item .footer button:first-child:hover {
+  background-color: #1976d2;
+  transform: scale(1.05);
+}
+
+/* Edit mode buttons */
+.edit-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-buttons .save {
+  background-color: #4caf50;
+  color: white;
+}
+
+.edit-buttons .save:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+.edit-buttons .cancel {
+  background-color: #f0ad4e;
+  color: white;
+}
+
+.edit-buttons .cancel:hover {
+  background-color: #ec971f;
+  transform: scale(1.05);
+}
+
+  
+  

@@ -1,0 +1,15 @@
+.posts-page {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #ffffffcc;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(3px);
+  text-align: center;
+}
+
+.posts-page h1 {
+  margin-bottom: 30px;
+  color: #00bcd4;
+}

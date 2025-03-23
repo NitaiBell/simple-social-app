@@ -1,14 +1,20 @@
 backend/
-│── config/            # Stores configuration files
-│   ├── database.js    # Handles PostgreSQL connection using Sequelize
-│── models/            # Defines database models (tables)
-│   ├── Post.js        # Defines the Post model (content, createdAt)
-│── routes/            # Handles API routes
-│   ├── posts.js       # Handles adding and fetching posts
-│── .env               # Stores environment variables (database credentials)
-│── server.js          # Main backend server file (sets up Express)
-│── package.json       # Manages dependencies (npm packages)
-│── package-lock.json  # Ensures dependencies remain consistent
-│── node_modules/      # Stores installed dependencies
-│── tree_backend       # (Unknown file, likely not needed)
+│
+├── config/                         # Configuration files
+│   ├── database.js                 # Sequelize setup (ORM connection)
+│   ├── pg.js                       # pg Pool setup (raw SQL connection)
+│
+├── models/                         # Sequelize models
+│   ├── Post.js                     # Defines the Post model
+│
+├── routes/                         # Express route handlers
+│   ├── posts.js                    # Routes using both Sequelize & pg
+│
+├── .env                            # Environment variables (DB credentials, etc.)
+├── server.js                       # Main Express server (connects Sequelize & pg, sets up routes)
+├── package.json                    # Project metadata and npm scripts
+├── package-lock.json               # Exact versions of installed dependencies
+├── node_modules/                   # Installed npm packages
+└── tree_backend                    # (Can be deleted if not used)
+
 

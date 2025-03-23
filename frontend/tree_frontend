@@ -1,0 +1,24 @@
+frontend/
+│
+├── public/                          # Static assets (optional)
+│
+├── src/
+│   ├── pages/                       # Page components
+│   │   ├── Home.jsx                 # "/" - Home page
+│   │   ├── Home.css                 # Styling for Home
+│   │   ├── Posts.jsx                # "/posts" - Displays all posts
+│   │   └── Posts.css                # Styling for Posts
+│   │
+│   ├── components/                  # Reusable components
+│   │   ├── PostItem.jsx             # Displays a single post
+│   │   └── PostItem.css             # Styling for PostItem
+│   │
+│   ├── App.jsx                      # Main app layout and routing
+│   ├── App.css                      # Global or app-level styles
+│   ├── main.jsx                     # Entry point (renders App.jsx)
+│   └── index.css                    # Global reset/base styles
+│
+├── package.json                     # Project dependencies
+├── vite.config.js                   # Vite config
+└── README.md                        # Project documentation
+

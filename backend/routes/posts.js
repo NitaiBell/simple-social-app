@@ -84,4 +84,49 @@ router.delete("/raw/:id", async (req, res) => {
   }
 });
 
+
+// 🔹 Update a Post by ID (Using Sequelize)
+router.put("/:id", async (req, res) => {
+  try {
+    const { content } = req.body;
+    const { id } = req.params;
+
+    if (!content) return res.status(400).json({ message: "Post content required" });
+
+    const post = await Post.findByPk(id);
+    if (!post) return res.status(404).json({ message: "Post not found" });
+
+    post.content = content;
+    await post.save();
+
+    res.status(200).json(post);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// 🔹 Update a Post by ID (Using Raw SQL)
+router.put("/raw/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { content } = req.body;
+
+    if (!content) return res.status(400).json({ message: "Post content required" });
+
+    const result = await pool.query(
+      "UPDATE posts SET content = $1 WHERE id = $2 RETURNING *",
+      [content, id]
+    );
+
+    if (result.rowCount === 0) {
+      return res.status(404).json({ message: "Post not found" });
+    }
+
+    res.status(200).json(result.rows[0]);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
 export default router;
