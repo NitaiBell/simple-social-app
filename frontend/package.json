@@ -10,12 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mantine/core": "^7.17.2",
+    "@mantine/hooks": "^7.17.2",
+    "@tabler/icons-react": "^3.31.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "pg": "^8.14.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-multi-carousel": "^2.8.5",
     "react-router-dom": "^7.4.0",
     "sequelize": "^6.37.6",
     "sequelize-cli": "^6.6.2"

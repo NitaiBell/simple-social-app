@@ -7,7 +7,9 @@ frontend/
 │   │   ├── Home.jsx                 # "/" - Home page
 │   │   ├── Home.css                 # Styling for Home
 │   │   ├── Posts.jsx                # "/posts" - Displays all posts
-│   │   └── Posts.css                # Styling for Posts
+│   │   └── Posts.css 
+            buttons.jsx
+            buttons.css              # Styling for Posts
 │   │
 │   ├── components/                  # Reusable components
 │   │   ├── PostItem.jsx             # Displays a single post
