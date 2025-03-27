@@ -1,0 +1,76 @@
+.send-mail-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #fbdada, #ce5757);
+    font-family: Arial, sans-serif;
+  }
+  
+  .send-mail-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .send-mail-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #444;
+    text-align: center;
+    max-width: 400px;
+  }
+  
+  .gmail-button {
+    background-color: #ce5757;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    width: 250px; /* 👈 add this */
+    text-align: center;
+  }
+  
+  .gmail-button:hover {
+    background-color: #b74444;
+  }
+
+
+  .gmail-button {
+    background-color: #ce5757;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 40px; /* Rounded style */
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    width: 250px;
+    display: flex;
+    justify-content: center;  /* 👈 center horizontally */
+    align-items: center;      /* 👈 center vertically */
+    gap: 0.75rem;
+  }
+  
+  .gmail-button:hover {
+    background-color: #b74444;
+  }
+  
+  .gmail-icons-in-button {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+    
+  .gmail-icons-in-button img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  
+  

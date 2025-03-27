@@ -4,6 +4,8 @@ import Posts from "./pages/Posts.jsx";
 import Buttons from "./pages/Buttons.jsx";
 import CarouselPage from "./pages/carousel.jsx";
 import QnAPage from "./pages/QnAPage.jsx"; // ✅ Add this line
+import SendMail from "./pages/SendMail.jsx"; // ✅ Add this line
+
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
         <Route path="/buttons" element={<Buttons />} />
         <Route path="/carousel" element={<CarouselPage />} />
         <Route path="/qna" element={<QnAPage />} /> {/* ✅ Add this line */}
+        <Route path="/send" element={<SendMail />} /> {/* ✅ New route */}
       </Routes>
     </Router>
   );
