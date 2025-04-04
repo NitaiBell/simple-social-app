@@ -1,15 +1,16 @@
 import React from "react";
 import "./PlayNote.css";
 
-const notes = ["C3", "D3", "E3", "F3", "G3", "A3", "B3", "C4"];
+const notes = ["C4", "D4", "E4", "F4", "G4", "A4", "B4", "C5"];
 
 const chords = [
-  { name: "C", notes: ["C3", "E3", "G3"] },
-  { name: "Dm", notes: ["D3", "F3", "A3"] },
-  { name: "Em", notes: ["E3", "G3", "B3"] },
-  { name: "F", notes: ["F3", "A3", "C4"] },
-  { name: "G", notes: ["G3", "B3", "D4"] },
-  { name: "Am", notes: ["A3", "C4", "E4"] },
+  { name: "C", notes: ["C3", "E3", "G3", "C4", "E4", "G4"] },
+  { name: "Dm", notes: ["D3", "F3", "A3", "D4", "F4", "A4"] },
+  { name: "Em", notes: ["E3", "G3", "B3", "E4", "G4", "B4"] },
+  { name: "F", notes: ["F3", "A3", "C4", "F4", "A4", "C5"] },
+  { name: "G", notes: ["G2", "B3", "D4", "G4", "B4", "D5"] },
+  { name: "Am", notes: ["A3", "C3", "E4", "A4", "C5", "E4"] },
+  { name: "Bm", notes: ["B3", "D4", "F4", "B4", "D5", "F5"] },
 ];
 
 const PlayNote = () => {
@@ -29,6 +30,7 @@ const PlayNote = () => {
 
     const now = audioContext.currentTime;
     const fadeStart = now + duration / 1000 - 0.5;
+
     gainNode.gain.setValueAtTime(1, now);
     gainNode.gain.linearRampToValueAtTime(0, fadeStart + 0.5);
 
@@ -36,9 +38,9 @@ const PlayNote = () => {
     source.stop(now + duration / 1000);
   };
 
-  const playChord = async (chordNotes, duration = 2000) => {
+  const playChord = async (chordNotes) => {
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-    await Promise.all(chordNotes.map((note) => playNote(note, duration, audioContext)));
+    await Promise.all(chordNotes.map((note) => playNote(note, 2000, audioContext)));
   };
 
   return (
